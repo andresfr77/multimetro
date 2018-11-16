@@ -8,7 +8,7 @@ function inicia(){
    else{horaInicio=data.getHours() +":"+data.getMinutes()+" h";}
    taboaIntentos=new Array();
    menuLateral='';
-   menuActividades='<h1>Siguiente...</h1><table width=\"140\" border=\"0\"><tr><td><a href=\"javascript:irA(0)\" title=\"Introducción\">1 </a></td><td><a href=\"javascript:irA(1)\" title=\"Actividad 1 Oedenar la frase\">2 </a></td><td><a href=\"javascript:irA(2)\" title=\"Créditos\">3 </a></td></tr></table>';
+   menuActividades='<h1>Siguiente...</h1><table width=\"140\" border=\"0\"><tr><td><a href=\"javascript:irA(0)\" title=\"Introducción\">1 </a></td><td><a href=\"javascript:irA(1)\" title=\"Actividad 1 Ordenar la frase\">2 </a></td><td><a href=\"javascript:irA(2)\" title=\"Sistema Internacional\">3 </a></td><td><a href=\"javascript:irA(3)\" title=\"Actividad 2 Ordenar imágenes\">4 </a></td><td><a href=\"javascript:irA(4)\" title=\"Actividad 3 Relacionar palab\">5 </a></td></tr><tr><td><a href=\"javascript:irA(5)\" title=\"Actividad 4 Lectura Elect\">6 </a></td><td><a href=\"javascript:irA(6)\" title=\"Actividad 4 Continuación Lect\">7 </a></td><td><a href=\"javascript:irA(7)\" title=\"Actividad 5 Crucigrama Concept\">8 </a></td><td><a href=\"javascript:irA(8)\" title=\"Créditos\">9 </a></td></tr></table>';
    if (window.opener == null){
       indice=0;
       }else{
@@ -18,11 +18,17 @@ function inicia(){
          indice=window.opener.indice;
       }
    }
-   maxIndice=2;
+   maxIndice=8;
 	taboaContidos=new Array();
 taboaContidos[0]=new act("Introducción","Introducción","","<object width='100%' height='420' type='text/html' data='ACT_01_INTRODUCCION_VIDEO/ACT_01_INTRODUCCION_VIDEO.htm'></object>",true,"",true,true,true);
-taboaContidos[1]=new act("Actividad 1 Oedenar la frase","Actividad 1 Oedenar la frase","","<object width='100%' height='420' type='text/html' data='ACT_01_ORDENAR_FRASE/ACT_01_ORDENAR_FRASE.htm'></object>",true,"",true,true,true);
-taboaContidos[2]=new act("Créditos","Créditos","","<object width='100%' height='420' type='text/html' data='X_CREDITOS/X_CREDITOS1.htm'></object>",true,"",true,true,true);
+taboaContidos[1]=new act("Actividad 1 Ordenar la frase","Actividad 1 Ordenar la frase","","<object width='100%' height='420' type='text/html' data='ACT_01_ORDENAR_FRASE/ACT_01_ORDENAR_FRASE.htm'></object>",true,"",true,true,true);
+taboaContidos[2]=new act("Sistema Internacional","Sistema Internacional","","<object width='100%' height='420' type='text/html' data='ACT_02_SISTEMA_INTERNACIONAL/ACT_02_SISTEMA_INTERNACIONAL.htm'></object>",true,"",true,true,true);
+taboaContidos[3]=new act("Actividad 2 Ordenar imágenes","Actividad 2 Ordenar imágenes","","<object width='100%' height='420' type='text/html' data='ACT_02_ORDENAR_IMAGENES/ACT_02_ORDENAR_IMAGENES.htm'></object>",true,"",true,true,true);
+taboaContidos[4]=new act("Actividad 3 Relacionar palab","Actividad 3 Relacionar palab","","<object width='100%' height='420' type='text/html' data='ACT_03_Relacionar_Palabras/ACT_03_Relacionar_Palabras.htm'></object>",true,"",true,true,true);
+taboaContidos[5]=new act("Actividad 4 Lectura Elect","Actividad 4 Lectura Elect","","<object width='100%' height='420' type='text/html' data='ACT_04_LECTURA_ELECTRICIDAD/ACT_04_LECTURA_ELECTRICIDAD1.htm'></object>",true,"",true,true,true);
+taboaContidos[6]=new act("Actividad 4 Continuación Lect","Actividad 4 Continuación Lect","","<object width='100%' height='420' type='text/html' data='ACT_04_SEGUNDA_ELECTRICIDAD/ACT_04_SEGUNDA_ELECTRICIDAD1.htm'></object>",true,"",true,true,true);
+taboaContidos[7]=new act("Actividad 5 Crucigrama Concept","Actividad 5 Crucigrama Concept","","<object width='100%' height='420' type='text/html' data='ACT_05_CRUCIGRAMA_ELECTRICIDAD/ACT_05_CRUCIGRAMA_ELECTRICIDAD.htm'></object>",true,"",true,true,true);
+taboaContidos[8]=new act("Créditos","Créditos","","<object width='100%' height='420' type='text/html' data='X_CREDITOS/X_CREDITOS1.htm'></object>",true,"",true,true,true);
 document.getElementById("botonAdiante").href="javascript:avanza()";
 document.getElementById("botonAtras").href="javascript:retrocede()";
 document.getElementById("botonAxuda").target="_blank";
